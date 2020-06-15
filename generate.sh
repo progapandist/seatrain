@@ -10,11 +10,9 @@ rails_root=$3
 mkdir "$rails_root"/helm
 cp -R "$rails_root"/seatrain/step1-ssl/ "$rails_root"/helm
 
-sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/ingress.yaml 
-sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/_helpers.tpl 
-sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/service-account.yaml
-sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/service.yaml 
-sed -i "" "s/SSL_HOST/$host/g" "$rails_root"/helm/values.yaml
+sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/* 
+sed -i "" "s/SSL_HOST/$host/g" "$rails_root"/helm/*
+
 
 cd "$rails_root"
 
