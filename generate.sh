@@ -12,7 +12,7 @@ sed -i "" "s/APP_NAME/$name/g" $rails_root/seatrain/step1-ssl/templates/_helpers
 sed -i "" "s/SSL_HOST/$host/g" $rails_root/seatrain/step1-ssl/values.yaml
 
 mkdir $rails_root/helm
-mv $rails_root/seatrain/step1-ssl/ $rails_root/helm
+cp -rR $rails_root/seatrain/step1-ssl/ $rails_root/helm
 cd $rails_root
 
 rm -rf seatrain
