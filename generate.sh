@@ -17,4 +17,4 @@ cd $rails_root
 
 rm -rf seatrain
 
-helm dep build /helm
+helm dep build ./helm
