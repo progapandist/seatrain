@@ -12,6 +12,8 @@ cp -R "$rails_root"/seatrain/step1-ssl/ "$rails_root"/helm
 
 sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/ingress.yaml 
 sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/_helpers.tpl 
+sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/service-account.yml
+sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/service.yml 
 sed -i "" "s/SSL_HOST/$host/g" "$rails_root"/helm/values.yaml
 
 cd "$rails_root"
