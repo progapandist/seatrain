@@ -7,13 +7,14 @@ name=$1
 host=$2
 rails_root=$3
 
-sed -i "" "s/APP_NAME/$name/g" $rails_root/seatrain/step1-ssl/templates/ingress.yaml 
-sed -i "" "s/APP_NAME/$name/g" $rails_root/seatrain/step1-ssl/templates/_helpers.tpl 
-sed -i "" "s/SSL_HOST/$host/g" $rails_root/seatrain/step1-ssl/values.yaml
+mkdir "$rails_root"/helm
+cp -R "$rails_root"/seatrain/step1-ssl/ "$rails_root"/helm
 
-mkdir $rails_root/helm
-cp -R $rails_root/seatrain/step1-ssl/ $rails_root/helm
-cd $rails_root
+sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/ingress.yaml 
+sed -i "" "s/APP_NAME/$name/g" "$rails_root"/helm/templates/_helpers.tpl 
+sed -i "" "s/SSL_HOST/$host/g" "$rails_root"/helm/values.yaml
+
+cd "$rails_root"
 
 rm -rf seatrain
 
