@@ -1,44 +1,18 @@
 apiVersion: v1
 entries:
-  redis:
-    - apiVersion: v1
-      appVersion: 5.0.7
-      created: "2020-07-27T16:17:12.576809+02:00"
-      description:
-        Open source, advanced key-value store. It is often referred to as
-        a data structure server since keys can contain strings, hashes, lists, sets
-        and sorted sets.
-      digest: eac28bbdddfcf493aca06379cb70bdfa390e83a41b4096278962f15bffda2612
-      home: http://redis.io/
-      icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
-      keywords:
-        - redis
-        - keyvalue
-        - database
-      maintainers:
-        - email: containers@bitnami.com
-          name: Bitnami
-        - email: cedric@desaintmartin.fr
-          name: desaintmartin
-      name: redis
-      sources:
-        - https://github.com/bitnami/bitnami-docker-redis
-      urls:
-        - https://progapandist.github.io/charts/redis-10.2.1.tgz
-      version: 10.2.1
   seatrain:
-    - apiVersion: v2
-      appVersion: "1"
-      created: "2020-07-27T16:17:12.572363+02:00"
-      dependencies:
-        - name: redis
-          repository: "@stable"
-          version: 10.2.1
-      description: A Helm chart for Kubernetes deployment of Rails apps
-      digest: 34bb1304a5913a56d4259799c5dc2098a2145e6e80d825985589727286fa90f9
-      name: seatrain
-      type: application
-      urls:
-        - https://progapandist.github.io/seatrain/seatrain-0.1.0.tgz
-      version: 0.1.0
-generated: "2020-07-27T16:17:12.562272+02:00"
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2020-08-19T13:27:48.945703+02:00"
+    dependencies:
+    - name: redis
+      repository: '@stable'
+      version: 10.2.1
+    description: A Helm chart for Kubernetes deployment of Rails apps
+    digest: 34bb1304a5913a56d4259799c5dc2098a2145e6e80d825985589727286fa90f9
+    name: seatrain
+    type: application
+    urls:
+    - https://progapandist.github.io/seatrain/seatrain-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-08-19T13:27:48.94047+02:00"
